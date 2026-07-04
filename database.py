@@ -11,6 +11,7 @@ ALLOYDB_INSTANCE = os.getenv(
 DB_USER = os.getenv("DB_USER", "lathajayeshchhapekar@gmail.com")
 DB_PASS = os.getenv("DB_PASS", "")  # Usually empty for IAM
 DB_NAME = os.getenv("DB_NAME", "postgres") # Default database
+USE_IAM_AUTH = os.getenv("USE_IAM_AUTH", "true").lower() == "true"
 
 # Initialize Connector object
 connector = Connector()
@@ -23,7 +24,7 @@ def getconn():
         user=DB_USER,
         password=DB_PASS,
         db=DB_NAME,
-        enable_iam_auth=True,
+        enable_iam_auth=USE_IAM_AUTH,
         ip_type=IPTypes.PUBLIC,
     )
     return conn
