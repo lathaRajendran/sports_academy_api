@@ -6,9 +6,9 @@ from google.cloud.alloydb.connector import Connector, IPTypes
 # Retrieve configuration from environment variables
 ALLOYDB_INSTANCE = os.getenv(
     "ALLOYDB_INSTANCE",
-    "projects/project-caf9f38a-3e50-4bba-b73/locations/us-central1/clusters/sport-management-db/instances/primary"
+    "projects/project-861ad996-4f43-41e8-b56/locations/us-central1/clusters/sports-academy-db/instances/primary"
 )
-DB_USER = os.getenv("DB_USER", "lathajayeshchhapekar@gmail.com")
+DB_USER = os.getenv("DB_USER", "tech.svvclub@gmail.com")
 DB_PASS = os.getenv("DB_PASS", "")  # Usually empty for IAM
 DB_NAME = os.getenv("DB_NAME", "postgres") # Default database
 USE_IAM_AUTH = os.getenv("USE_IAM_AUTH", "true").lower() == "true"
